@@ -103,6 +103,10 @@ table, th, td{
     text-align: center;
 }
 
+.project legend{
+    text-align: left;
+}
+
 .project-container{
     display: flex;
     justify-content: center;

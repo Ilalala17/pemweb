@@ -70,39 +70,43 @@
         </section>
 
         <section>
-            <fieldset class="container-box project">
-                <legend>PROJECTS</legend>
-                <div class="project-container">
-                    <div class="project-box">
-                        <h3>Moodcare+</h3>
-                        <a href="#">View Project</a>
+            <form id="kirim" method="post">
+
+                <fieldset class="container-box project">
+                    <legend>PROJECTS</legend>
+                    <div class="project-container">
+                        <div class="project-box" id="moodcare">
+                            <h3>Moodcare+</h3>
+                            <a href="#">View Project</a>
+                        </div>
+    
+                        <div class="project-box" id="rm">
+                            <h3>SI Rumah Makan Padang</h3>
+                            <a href="https://github.com/Ilalala17/Web-Sistem-Informasi-Rumah-Makan">View Project</a>
+                        </div>
                     </div>
-
-                    <div class="project-box">
-                        <h3>SI Rumah Makan Padang</h3>
-                        <a href="https://github.com/Ilalala17/Web-Sistem-Informasi-Rumah-Makan">View Project</a>
-                    </div>
-                </div>
-            </fieldset>
-
-            <fieldset class="container-box">
-                <legend>CONTACT ME</legend>
-                <label for="nama">Nama</label>
-                <input type="text" placeholder="Isi nama disini" required><br>
-
-                <label for="email">Email</label>
-                <input type="email" placeholder="example@email" required><br>
-
-                <label for="tanggal">hari/tanggal</label>
-                <input type="date" required>
-
-                <label for="pesan">Pesan</label>
-                <textarea name="pesan" placeholder="Tuliskan pesan anda disini" required></textarea><br>
-                <button class="btn">Submit</button>
-            </fieldset>
+                </fieldset>
+    
+                <fieldset class="container-box">
+                    <legend>CONTACT ME</legend>
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" placeholder="Isi nama disini" ><br>
+    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="example@email" ><br>
+    
+                    <label for="tanggal">hari/tanggal</label>
+                    <input type="date" required>
+    
+                    <label for="pesan">Pesan</label>
+                    <textarea name="pesan" id="pesan" placeholder="Tuliskan pesan anda disini" ></textarea><br>
+                    <button type="submit" class="btn" >Submit</button>
+                </fieldset>
+            </form>
 
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 <footer>
     <p>© 2026 My Biodata Website</p>
