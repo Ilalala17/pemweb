@@ -11,7 +11,7 @@
     <header>
         <nav>
             <a href="index.html">Home</a> 
-            <a href="page2.html">About me</a>
+            <a href="../pemweb/assets/">About me</a>
         </nav>
     </header>
 
@@ -70,7 +70,7 @@
         </section>
 
         <section>
-            <form action="index.php" id="kirim" method="post">
+            <form action="index.php" method="post">
 
                 <fieldset class="container-box project">
                     <legend>PROJECTS</legend>
@@ -90,16 +90,16 @@
                 <fieldset class="container-box">
                     <legend>CONTACT ME</legend>
                     <label for="nama">Nama</label>
-                    <input type="text" id="nama" placeholder="Isi nama disini" ><br>
+                    <input type="text" id="nama" name="nama" placeholder="Isi nama disini" ><br>
     
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="example@email" ><br>
+                    <input type="email" id="email" name="email" placeholder="example@email" ><br>
     
                     <label for="tanggal">hari/tanggal</label>
-                    <input type="date" required>
+                    <input type="date" name="tanggal" required>
     
                     <label for="pesan">Pesan</label>
-                    <textarea name="pesan" id="pesan" placeholder="Tuliskan pesan anda disini" ></textarea><br>
+                    <textarea id="pesan" name="pesan" placeholder="Tuliskan pesan anda disini" ></textarea><br>
                     <button type="submit" class="btn" >Submit</button>
                 </fieldset>
             </form>

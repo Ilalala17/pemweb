@@ -1,0 +1,104 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
+    header("Location: login.php");
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="container" style="padding-top: 50px;">
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="page2.php">About Me</a>
+            <a href="logout.php">Logout (<?php echo htmlspecialchars($_SESSION['username']); ?>)</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container-box">
+            <div>
+                <h1>HAI, SAYA FADILA</h1>
+                <h3>Berikut adalah biodata singkat saya</h3>
+
+                <table>
+                    <tr>
+                        <th>Nama:</th>
+                        <td>Fadila Rosidatul A'la</td>
+                    </tr>
+                    <tr>
+                        <th>Email:</th>
+                        <td>fadilarosida37@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <th>Prodi:</th>
+                        <td>Teknik Informatika</td>
+                    </tr>
+                    <tr>
+                        <th>Universitas:</th>
+                        <td>Universitas Mataram</td>
+                    </tr>
+                    <tr>
+                        <th>Hobi:</th>
+                        <td>Mendengarkan musik, menonton drama</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <form action="index.php" method="post" id="kirim">
+
+                <fieldset class="container-box project">
+                    <legend>PROJECTS</legend>
+                    <div class="project-container">
+                        <div class="project-box" id="moodcare">
+                            <h3>Moodcare+</h3>
+                            <a href="#">View Project</a>
+                        </div>
+                        <div class="project-box" id="rm">
+                            <h3>SI Rumah Makan Padang</h3>
+                            <a href="https://github.com/Ilalala17/Web-Sistem-Informasi-Rumah-Makan">View Project</a>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="container-box">
+                    <legend>CONTACT ME</legend>
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" name="nama" placeholder="Isi nama"><br>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="example@email"><br>
+
+                    <label for="tanggal">hari/tanggal</label>
+                    <input type="date" name="tanggal" required>
+
+                    <label for="pesan">Pesan</label>
+                    <textarea id="pesan" name="pesan" placeholder="Tuliskan pesan anda"></textarea><br>
+                    <button type="submit" class="btn">Submit</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 My Biodata Website</p>
+        <div class="sosmed">
+            <a href="https://instagram.com/fdiilalarosie"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/ilalala17"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
